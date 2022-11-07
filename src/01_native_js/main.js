@@ -61,7 +61,7 @@ console.log(arrUserAddress.filter(a => a.id === arrUser.id))
 
 const arrUserDeep = [
     {
-        id:1,
+        id: 1,
         name: 'Bob',
         age: 25,
         isStudent: true,
@@ -71,34 +71,55 @@ const arrUserDeep = [
         }
     },
     {
-        id:2,
+        id: 2,
         name: 'Ben',
         age: 35,
         isStudent: false,
         address: {
             country: 'Belarus',
             city: 'Minsk'
-        }},
+        }
+    },
     {
-        id:3,
+        id: 3,
         name: 'Kok',
         age: 58,
         isStudent: true,
         address: {
             country: 'Italy',
             city: 'Rim'
-        }},
+        }
+    },
     {
-        id:4,
+        id: 4,
         name: 'Fak',
         age: 12,
         isStudent: true,
         address: {
             country: 'Russia',
             city: 'Omsk'
-        }},
+        }
+    },
 ]
 
-const arrUserDeep_2=[...arrUserDeep]
+const newUser = {
+    id: 5,
+    name: 'Lol',
+    age: 18,
+    isStudent: false,
+    address: {
+        country: 'Ukraine',
+        city: 'Kiev'
+    }
+}
+
+const arrUserDeep_2 = [...arrUserDeep]
 console.log(arrUserDeep)
-console.log(arrUserDeep_2===arrUserDeep)
+console.log(arrUserDeep_2 === arrUserDeep)
+
+const arrUserDeep_3 = [...arrUserDeep, newUser]
+console.log(arrUserDeep_3)
+
+const arrUserDeep_4 = arrUserDeep_3.map(u => u.name === 'Lol' ? {...u, name: 'Klark'}:u)
+console.log(arrUserDeep_4)
+
