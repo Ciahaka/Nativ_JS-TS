@@ -56,15 +56,15 @@ const nums = [54, 43, 28, 90, 67, 1, 19]
 for (let j = 0; j < nums.length - 1; j++) {      //цикл в цикле, чтобы не повторять множество раз
     let isSorted = true
     for (let i = 0; i < nums.length - 1 - j; i++) {    //счетчик минус -j оптимизирует сортировку так, что отсортированные элемнты больше не трогает
-
         if (nums[i] > [i + 1]) {
             isSorted = false;   //при такой записи не забыть про ; .
-                // const temp = nums[i]   //-пустой стакан
-                // nums[i + 1] = nums[i + 1]
-                // nums[i + 1] = temp
-                [nums[i + 1], nums[i]] = [nums[i], nums[i + 1]]  //запись короткая Производительность ниже чем у цикла for
+            // const temp = nums[i]   //-пустой стакан
+            // nums[i + 1] = nums[i + 1]
+            // nums[i + 1] = temp
+            [nums[i + 1], nums[i]] = [nums[i], nums[i + 1]]  //запись короткая Производительность ниже чем у цикла for
         }
     }
     if (isSorted) break
 }
 
+//
