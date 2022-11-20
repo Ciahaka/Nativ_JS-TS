@@ -9,3 +9,7 @@ const handler_1 = () => {
 }
 sm.onclick = handler_1
 sm.onclick = null
+
+sm.addEventListener('click', handler)
+sm.addEventListener('click', handler_1)
+sm.removeEventListener('click', handler_1)
