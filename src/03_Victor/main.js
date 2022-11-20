@@ -13,3 +13,9 @@ sm.onclick = null
 sm.addEventListener('click', handler)
 sm.addEventListener('click', handler_1)
 sm.removeEventListener('click', handler_1)
+
+const a= document.getElementById('a')
+a.addEventListener('click',(e)=>{
+e.preventDefault()
+    console.log('stop')
+})
