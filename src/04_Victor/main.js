@@ -38,16 +38,51 @@ const tasks = {
 const newTask = {
     id: '14', title: 'TS'
 }
-const copyTasks =  {...tasks,[todoListId_1]: [...tasks[todoListId_1],newTask]}
+const copyTasks = {...tasks, [todoListId_1]: [...tasks[todoListId_1], newTask]}
 console.log(copyTasks)
 
-const deleteTask = {...tasks,[todoListId_2]: tasks[todoListId_2].filter(el=> el.id !=='26')}
+const deleteTask = {...tasks, [todoListId_2]: tasks[todoListId_2].filter(el => el.id !== '26')}
 console.log(deleteTask)
 
 //reduce
-const nums=[342,467,222,8901]
-const newNums=nums.reduce((acc,el)=>acc+el,0)
+const nums = [342, 467, 222, 8901]
+const newNums = nums.reduce((acc, el) => acc + el, 0)
 console.log(newNums)
-const easyNums = [1,2,3,4,5]
-const newEasyNums = easyNums.reduce((acc,el)=>acc+el,0)
+const easyNums = [1, 2, 3, 4, 5]
+const newEasyNums = easyNums.reduce((acc, el) => acc + el, 0)
 console.log(newEasyNums)
+
+const nums_1 = [342, 467, 222, 8901]
+const newNums_1 = nums_1.reduce((acc, el) => acc > el ? acc : el)
+console.log(newNums_1)
+
+let students = [
+    {
+
+        name: 'Bob',
+        age: 25,
+        isMarried: true,
+        scores: 12
+    },
+    {
+
+        name: 'Ben',
+        age: 35,
+        isStudent: false,
+        scores: 42
+    },
+    {
+
+        name: 'Kok',
+        age: 58,
+        isStudent: true,
+        scores: 25
+    },
+    {
+
+        name: 'Fak',
+        age: 12,
+        isStudent: true,
+        scores: 188
+    },
+]
