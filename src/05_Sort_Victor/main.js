@@ -1,44 +1,59 @@
-const names = ['bob', 'alex', 'donald']
-console.log(names.sort())
+const strings = ['bob', 'alex', 'donald', 'Bred', 'Игорь', 'юрий', 25, 'ёжик', 1, '1', 1]
+console.log(strings.sort())
+const sortStrings = (strings.sort() === strings)
+console.log(sortStrings)
+const sortStrings_1 = strings.sort().reverse()
+console.log(sortStrings_1)
 
-const numbers = [100, 9, 66, 100, 1]
+const numbers = [100, 9, 66, 1100, 1, 1000]
+const numbers_1 = [2, 15, 1000, 100, 1]
 console.log(numbers.sort())
+console.log(numbers_1.sort())
 
-const compareFn = {}
+
+const compareFn = (a, b) => {
+    if (a <= b) {
+        return -5
+    }
+    return 25
+}
+console.log(numbers.sort(compareFn))
+console.log(numbers.sort(compareFn).reverse())
+
 
 const students = [
     {
-        name: "Bob",
+        name: 'Bob',
         age: 22,
         isMarried: true,
         scores: 95
     },
     {
-        name: "Alex",
+        name: 'Alex',
         age: 23,
         isMarried: true,
         scores: 89
     },
     {
-        name: "Helge",
+        name: 'Helge',
         age: 21,
         isMarried: true,
         scores: 89
     },
     {
-        name: "Nick",
+        name: 'Nick',
         age: 20,
         isMarried: false,
         scores: 120
     },
     {
-        name: "John",
+        name: 'John',
         age: 19,
         isMarried: false,
         scores: 121
     },
     {
-        name: "alex",
+        name: 'alex',
         age: 23,
         isMarried: true,
         scores: 89
