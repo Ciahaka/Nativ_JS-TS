@@ -44,7 +44,7 @@ const user = {
   friends: ["Alex", "Nick", "John"],
 };
 
-https://www.dev-notes.ru/articles/deep-copying-using-structured-clone/
+// https://www.dev-notes.ru/articles/deep-copying-using-structured-clone
 
 //1. Поверхностная копия student
 const copyUser = { ...user }; // Object
@@ -58,7 +58,7 @@ console.log(user.friends === deepCopyStudent.friends);
 
 //3. Поверхностная копия students
 const copyStudents = [...students];
-slice()
+
 console.log(students === copyStudents);
 console.log(students[0] === copyStudents[0]);
 
@@ -93,9 +93,9 @@ const bestStudents = students.filter((st) => st.scores >= 100);
 console.log(bestStudents);
 
 //6a.Сформируйте массив из трёх лучших студентов
-// const topStudents = deepCopyStudents.splice(0, 3);
-// console.log(topStudents);
-// console.log(deepCopyStudents);
+const topStudents = deepCopyStudents.splice(0, 3);
+console.log(topStudents);
+console.log(deepCopyStudents);
 
 //6b. Объедините массивы deepCopyStudents и topStudents так,
 // чтоб сохранился порядок сортировки
@@ -142,7 +142,7 @@ const bestStudent = students.reduce((acc, st) => {
 });
 console.log(bestStudent);
 //12a. Найдите 2 студента с самым высоким баллом 
-let bestStudent = students[0];
+let bestStudent1 = students[0];
 let bestStudent2 = students[1];
 for (let i=1; i < students.length; i++) {
     if (bestStudent.scores > bestStudent2.scores) {
@@ -151,7 +151,7 @@ for (let i=1; i < students.length; i++) {
         }
     }  else {
         if (students[i].scores > bestStudent.scores) {
-            bestStudent = students[i];
+            bestStudent1 = students[i];
         }
     }
 
@@ -172,6 +172,7 @@ for (let i = 0; i < students.length; i++) {
 
 //13. Найдите сумму баллов всех студентов
 const scoresSum = students.reduce((acc, st) => acc + st.scores, 0);
+console.log('-----------------------------------------------');
 console.log(scoresSum);
 
 // 14.Напишите функцию addFriends, которая принимает параметром массив students и возвращает новый массив, при этом добавляет в каждому студенту свойство .friends, значением которого является массив имён всех остальных студентов из массива, за исключением собственного имени студента. Т.е. в друзьях у Боба Боба быть не должно.
